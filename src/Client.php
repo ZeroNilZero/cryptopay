@@ -1,6 +1,10 @@
 <?php
 namespace Sarani\CryptoBot;
 
+use Sarani\CryptoBot\Update;
+use Sarani\CryptoBot\Invoice;
+use Sarani\CryptoBot\Transfer;
+
 class Client {
   protected $_token;
   protected $_client;
@@ -17,62 +21,37 @@ class Client {
         'Crypto-Pay-API-Token' => $this->_token
       ]
     ]);
-
   }
   public function getMe() {
     $res = $this->_client->request('GET', 'getMe');
-    // $response->getStatusCode();
-    $response = $res->getBody();
-    $response =json_decode($response); 
-    return $response;
+    return $this->_res($res);
   }
   public function getBalance() {
     $res = $this->_client->request('GET', 'getBalance');
-    $response = $res->getBody();
-    $response =json_decode($response); 
-    return $response;
+    return $this->_res($res);
   }
   public function getExchangeRates() {
     $res = $this->_client->request('GET', 'getExchangeRates');
-    $response = $res->getBody();
-    $response =json_decode($response); 
-    return $response;
+    return $this->_res($res);
   }
 
   public function getCurrencies() {
     $res = $this->_client->request('GET', 'getCurrencies');
-    // $response = $res->getBody();
-    // $response =json_decode($response); 
-    // return $response;
     return $this->_res($res);
   }
 
-  public function createInvoice() {
+  public function createInvoice(array $params = []) {
     $res = $this->_client->request('GET', 'createInvoice', [
-        'json' => [
-          // 'invoice_id'  =>  '12098'
-          'asset'   => 'TON',
-          'amount'  => '2.50',
-          'payload' =>  '1115', # subscription id
-          'allow_comments'  =>  False,
-          'allow_anonymous' =>  False,
-          'paid_btn_name' =>  'openBot',
-          'paid_btn_url'  =>  'https://t.me/atrafabot',
-          'hidden_message'  =>  'We processing your payment',
-          'description' =>  'Monthly Subscription'
-        ]
+        'json' => $params
     ]);
     $result = $this->_res($res); 
     $inv = new Invoice($result);
     return $inv;
   }
 
-  public function getInvoices() {
+  public function getInvoices(array $params = []) {
     $res = $this->_client->request('GET', 'getInvoices', [
-        'json' => [
-          'asset'  =>  'TON',
-          'invoice_ids'   => '12600,12626,12745',
-        ]
+        'json' => $params
     ]);
     $result = $this->_res($res); 
     $list = [];
@@ -85,16 +64,9 @@ class Client {
     return $list;
   }
 
-  public function transfer() {
+  public function transfer(array $params = []) {
     $res = $this->_client->request('GET', 'transfer', [
-        'json' => [
-          'user_id'  =>  '431424057',
-          'asset'   => 'USDT',
-          'amount'  => '2.50',
-          'spend_id' =>  '1115', # reequest uniqe id
-          'disable_send_notification'  =>  False,
-          'comment' =>  'Monthly Subscription transfer'
-        ]
+        'json' => $params
     ]);
     $result = $this->_res($res); 
     $transfer = new Transfer($result);
@@ -109,6 +81,5 @@ class Client {
     } else {
       throw new Exception($response->error);
     }
-    // return $response;
   }
 }

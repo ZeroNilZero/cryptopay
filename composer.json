@@ -5,7 +5,7 @@
     "require": {
         "guzzlehttp/guzzle": "^7.0"
     },
-    "license": "MIT",
+    "license": "BSD 3-Clause",
     "autoload": {
         "psr-4": {
             "Sarani\\CryptoPay\\": "src/"
@@ -14,7 +14,7 @@
     "authors": [
         {
             "name": "Dave S",
-            "email": "sarani.d@live.com"
+            "email": "ZeroNilZero@proton.me"
         }
     ],
     "minimum-stability": "stable"
