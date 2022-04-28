@@ -1,0 +1,21 @@
+{
+    "name": "sarani/crypto-pay",
+    "description": "Multicurrency Crypto Payment. Pay with cryptocurrency whenever you want.",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sarani\\CryptoPay\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dave S",
+            "email": "sarani.d@live.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
