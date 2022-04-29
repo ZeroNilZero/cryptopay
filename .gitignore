@@ -1,8 +1,5 @@
 .DS_Store
 Contributing.md
 vendor
-index.php
-example
 .gitignore
-Archive.zip
 composer.lock

@@ -1,7 +1,7 @@
 {
     "name": "sarani/cryptopay",
     "description": "Multicurrency Crypto Payment. Pay with cryptocurrency whenever you want.",
-    "keywords": ["Crypto","Payment", "cryptocurrency", "telegram crypto payment"],
+    "keywords": ["Crypto","Payment", "cryptocurrency", "telegram crypto payment", "telegram bot payment"],
     "homepage": "https://github.com/ZeroNilZero/cryptopay",
     "type": "library",
     "version": "1.0.0",
