@@ -6,7 +6,7 @@
     "type": "library",
     "version": "1.0.0",
     "require": {
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^6.0"
     },
     "license": "MIT",
     "autoload": {
