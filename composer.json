@@ -20,10 +20,5 @@
             "email": "ZeroNilZero@proton.me"
         }
     ],
-    "minimum-stability": "stable",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
-    }
+    "minimum-stability": "stable"
 }
