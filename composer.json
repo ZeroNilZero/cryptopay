@@ -1,7 +1,10 @@
 {
-    "name": "sarani/crypto-pay",
+    "name": "sarani/cryptopay",
     "description": "Multicurrency Crypto Payment. Pay with cryptocurrency whenever you want.",
+    "keywords": ["Crypto","Payment", "cryptocurrency", "telegram crypto payment"],
+    "homepage": "https://github.com/ZeroNilZero/cryptopay",
     "type": "library",
+    "version": "1.0.0",
     "require": {
         "guzzlehttp/guzzle": "^7.0"
     },
@@ -17,7 +20,7 @@
             "email": "ZeroNilZero@proton.me"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"

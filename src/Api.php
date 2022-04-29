@@ -1,18 +1,19 @@
 <?php
-namespace Sarani\CryptoBot;
+namespace Sarani\CryptoPay;
 
-use Sarani\CryptoBot\Update;
-use Sarani\CryptoBot\Invoice;
-use Sarani\CryptoBot\Transfer;
+use Sarani\CryptoPay\Update;
+use Sarani\CryptoPay\Invoice;
+use Sarani\CryptoPay\Transfer;
+use GuzzleHttp\Client;
 
-class Client {
+class Api {
   protected $_token;
   protected $_client;
 
   public function __construct($token, $mode = 'test') {
     $this->_token = $token;
     $url = $mode == 'test' ? 'https://testnet-pay.crypt.bot/api/' : 'https://pay.crypt.bot/api/';
-    $this->_client = new GuzzleHttp\Client([
+    $this->_client = new Client([
       'base_uri' => $url, 
       'verify' => true,
       'headers' => [

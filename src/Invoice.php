@@ -1,5 +1,5 @@
 <?php
-namespace Sarani\CryptoBot;
+namespace Sarani\CryptoPay;
 
 class Invoice {
   protected $_data;
