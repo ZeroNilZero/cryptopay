@@ -148,4 +148,4 @@ This Library is free for uses, But if you like it, any Supports are Wellcome.
 > * BTC, TON, USDT, USDC, BUSD, BNB: Transfer with [CryptoBot](http://t.me/CryptoBot?start=IVcdWKiAiL1L)
 
 ## License
-This project is released under the [BSD 3-Clause](https://github.com/ZeroNilZero/crypto-pay/blob/master/LICENSE.txt) License.
+This project is released under the [MIT License](https://github.com/ZeroNilZero/cryptopay/blob/main/LICENSE.txt) License.
