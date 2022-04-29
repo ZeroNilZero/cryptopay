@@ -8,7 +8,7 @@
     "require": {
         "guzzlehttp/guzzle": "^7.0"
     },
-    "license": "BSD 3-Clause",
+    "license": "BSD",
     "autoload": {
         "psr-4": {
             "Sarani\\CryptoPay\\": "src/"
