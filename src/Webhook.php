@@ -1,7 +1,7 @@
 <?php
 namespace Sarani\CryptoPay;
 
-use Sarani\CryptoBot\Update;
+use Sarani\CryptoPay\Update;
 
 Class Webhook {
   protected $_update;
