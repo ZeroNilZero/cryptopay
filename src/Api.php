@@ -17,7 +17,7 @@ class Api {
       'base_uri' => $url, 
       'verify' => true,
       'headers' => [
-        // 'User-Agent' => 'testing/1.0',
+        'User-Agent' => 'cryptopay-php-sdk/1.0',
         // 'Accept'     => 'application/json',
         'Crypto-Pay-API-Token' => $this->_token
       ]
